@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Q4-Drill2</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body class="container mt-5">
+    <h1 class="text-center">Heat Index Checker</h1>
+    <p class="text-center">Enter the current temperature and humidity to check the heat index and safety status.</p>
+    
+    <details class="mb-4">
+        <summary class="btn btn-info">Instructions</summary>
+        <p>Enter temperature in °C and humidity in %. Click "Calculate" to get the heat index and status based on NOAA guidelines.</p>
+    </details>
+    
+    <div class="row justify-content-center">
+        <div class="col-md-6">
+            <form id="heatForm">
+                <div class="mb-3">
+                    <label for="temp" class="form-label">Temperature (°C):</label>
+                    <input type="number" class="form-control" id="temp" required>
+                </div>
+                <div class="mb-3">
+                    <label for="humidity" class="form-label">Humidity (%):</label>
+                    <input type="number" class="form-control" id="humidity" min="0" max="100" required>
+                </div>
+                <button type="button" class="btn btn-primary" onclick="checkIndex()">Calculate</button>
+            </form>
+            
+            <div id="result" class="mt-4"></div>
+        </div>
+    </div>
+    <script src="main.js"></script>
+</body>
+</html>
