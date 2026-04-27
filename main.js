@@ -5,7 +5,7 @@ function checkIndex() {
     
     // Validate inputs
     if (temp !== temp || humidity !== humidity || humidity < 0 || humidity > 100) {
-        window.alert('Please enter valid temperature and humidity (0-100%).');
+        window.alert('Something is wrong with the inputs. (0-100% only).');
         return;
     }
     
